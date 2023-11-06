@@ -8,26 +8,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 const students = []
 
-const specialities = [
-    { 
-        id: 1, 
-        name: 'Informatica' 
-    },
-    { 
-        id: 2, 
-        name: 'Matematica' 
-    },
-    { 
-        id: 3, 
-        name: 'Fizica!' 
-    }
-]
+const specialities = []
 
 app.get('/', (req, res) => {
   res.send('Helllllgggggllo World!')
 })
 
-app.get('/students', (req, res) => {  //1
+/*app.get('/students', (req, res) => {  //1
     res.json(students);
 })
 
@@ -50,7 +37,7 @@ app.delete('/students/:id', (req, res) => {
     const studentIndex = students.findIndex(student => student.id == req.params.id)
     students.splice(studentIndex, 1);
     res.json({});
-})
+})*/
 
 app.get('/specialities', (req, res) => {
    res.json(specialities);
